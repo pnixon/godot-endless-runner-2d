@@ -1,144 +1,206 @@
-# Endless Runner Game
+# 🎮 Godot 4 Endless Runner 2D
 
-A fast-paced endless runner game built with Godot 4.4.1, featuring dynamic hazards, combat encounters, and chiptune music.
+**Classic side-scrolling endless runner with combat system, dynamic spawning, and chiptune soundtrack**
 
-## 🎮 Features
+![Godot 4](https://img.shields.io/badge/Godot-4.x-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange.svg)
 
-### Core Gameplay
-- **Multi-lane Movement**: Switch between 3 lanes and 4 rows for complex positioning
-- **Dynamic Hazards**: Ground spikes, overhead barriers, and enemy markers
-- **Combat System**: Turn-based grid combat when hitting enemy markers
-- **Pickup System**: Collect coins, XP, and health potions
-- **Streak System**: Perfect dodges build multiplier bonuses
+## 🚀 Features
 
-### Visual & Audio
-- **Zoomed Camera**: Enhanced view for better hazard anticipation
-- **Health System**: Visual health bar with color-coded status
-- **Background Music**: Chiptune soundtrack with volume controls
-- **Telegraph System**: Hazards flash before becoming active
-- **Special Effects**: Unique visuals for different hazard types
+### 🎯 **Dual-Mode Gameplay**
+- **Runner Mode** - Classic endless running with obstacles and pickups
+- **Combat Mode** - Turn-based tactical combat on a grid system
+- **Seamless transitions** - Switch between modes dynamically
+- **Progressive difficulty** - Challenges increase over time
 
-### Progression
-- **Biome System**: 3 different biomes with varying difficulty
-- **Dynamic Difficulty**: Hazard spawn rates increase over time
-- **Score System**: Points, coins, and XP tracking
-- **Health Potions**: Rare healing items spawn based on biome
+### 🎵 **Dynamic Audio System**
+- **Random music selection** - Different chiptune track each playthrough
+- **4 chiptune tracks** included for variety
+- **Runtime track switching** - Press N to change music anytime
+- **Seamless looping** - Continuous background music
 
-## 🎯 Controls
+### ⚔️ **Combat System**
+- **Grid-based tactics** - 4x4 tactical combat grid
+- **Turn-based strategy** - Plan your moves carefully
+- **Enemy encounters** - Face various enemy types
+- **Tactical positioning** - Use the grid to your advantage
 
-### Movement
-- **A/D** or **←/→**: Switch lanes
-- **W** or **↑**: Hop (avoid ground hazards)
-- **S** or **↓**: Slide (avoid overhead hazards)
+### 🎮 **Classic Controls**
+- **Arrow Keys/WASD** - Movement in both modes
+- **Space** - Jump in runner mode, confirm in combat
+- **M** - Toggle music, **+/-** - Volume, **N** - Next track
 
-### Audio Controls
-- **M**: Toggle music on/off
-- **+/-**: Adjust music volume
+## 🎯 **Gameplay Modes**
 
-### Debug Controls
-- **H**: Show health bar debug info
-- **T**: Test damage (10 HP)
-- **Y**: Test healing (10 HP)
+### 🏃 **Runner Mode**
+Classic endless runner mechanics:
+- **Obstacle avoidance** - Jump over hazards
+- **Pickup collection** - Coins, XP, and power-ups
+- **Dynamic spawning** - Obstacles and enemies appear over time
+- **Score progression** - Build up points and distance
 
-## 🏗️ Technical Details
+### ⚔️ **Combat Mode**
+Turn-based tactical combat:
+- **4x4 grid battlefield** - Strategic positioning matters
+- **Enemy encounters** - Face different enemy types
+- **Tactical movement** - Plan your position and attacks
+- **Combat resolution** - Win to continue running
+
+## 🛠️ **Technical Details**
+
+### Built With
+- **Godot 4.x** - Modern game engine
+- **GDScript** - Native scripting language
+- **2D Physics** - CharacterBody2D with custom movement
+- **Dynamic Audio** - MP3 streaming with random selection
 
 ### Architecture
-- **Modular Design**: Separate systems for hazards, combat, audio, and UI
-- **Object Pooling**: Efficient hazard spawning and cleanup
-- **Signal-based Communication**: Decoupled component interactions
-- **Dynamic Camera**: Smooth following with anticipation offset
+- **Mode-based design** - Clean separation between runner and combat
+- **Event-driven** - Signal-based communication
+- **Modular systems** - Audio, input, and gameplay isolated
+- **Scalable difficulty** - Dynamic enemy and obstacle spawning
 
-### Hazard System
-- **HazardData**: Centralized hazard configuration
-- **EnhancedObstacle**: Advanced hazard behavior with telegraphing
-- **Biome Weights**: Configurable spawn probabilities per biome
+### Game Systems
+- **Biome progression** - Different areas with unique challenges
+- **Enemy spawn system** - Distance and time-based encounters
+- **Pickup system** - Coins, XP, and health items
+- **UI management** - Score, health, and game state display
 
-### Combat System
-- **Grid-based Combat**: 3x4 tactical combat grid
-- **Formation System**: Predefined enemy formations per biome
-- **Turn-based Logic**: Player and enemy action phases
+## 🎮 **Controls**
 
-## 📁 Project Structure
+### Runner Mode
+- **Arrow Keys/WASD** - Move left/right
+- **Space** - Jump over obstacles
+- **Automatic forward** - Character runs automatically
 
-```
-endless_runner/
-├── *.gd                    # Core game scripts
-├── *.tscn                  # Scene files
-├── background_music.mp3    # Chiptune soundtrack
-├── wizard_variation_01_00001_.png  # Player sprite
-└── .godot/                 # Godot engine files (ignored)
-```
+### Combat Mode
+- **Arrow Keys/WASD** - Move on combat grid
+- **Space** - Confirm action/attack
+- **Strategic positioning** - Use grid tactically
 
-### Key Scripts
-- **GameManager.gd**: Main game loop, spawning, and state management
-- **Player.gd**: Player movement, health, and input handling
-- **EnhancedObstacle.gd**: Advanced hazard behavior
-- **HazardData.gd**: Hazard type definitions and factory methods
-- **CombatGrid.gd**: Turn-based combat system
+### Audio Controls
+- **M** - Toggle music on/off
+- **+/-** - Volume up/down
+- **N** - Next random track
 
-## 🚀 Getting Started
+### Game Controls
+- **Arrow Keys** - Restart when game over
+
+## 🎵 **Soundtrack**
+
+Includes 4 high-energy chiptune tracks:
+- **"chiptunes awesomeness.mp3"** - Energetic action theme
+- **"chiptunes awesomeness 2.mp3"** - Alternative action track
+- **"the brass and the blade (Remix) chiptunes.mp3"** - Epic remix
+- **"background_music.mp3"** - Original theme
+
+## 🚀 **Getting Started**
 
 ### Prerequisites
-- Godot 4.4.1 or later
-- Git (for cloning)
+- **Godot 4.x** - Download from [godotengine.org](https://godotengine.org/)
 
 ### Installation
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd endless_runner
+   git clone https://github.com/pnixon/godot-endless-runner-2d.git
+   cd godot-endless-runner-2d
    ```
 
-2. Open in Godot:
-   - Launch Godot Engine
+2. **Open in Godot**
+   - Launch Godot 4
    - Click "Import"
-   - Navigate to the project folder
+   - Navigate to project folder
    - Select `project.godot`
 
-3. Run the game:
-   - Press F5 or click the play button
-   - Select `Main.tscn` as the main scene if prompted
+3. **Play**
+   - Press F5 or click Play
+   - Select `Main.tscn` as main scene
 
-## 🎵 Audio
+## 🎯 **Game Features**
 
-The game features a chiptune soundtrack ("the brass and the blade (Remix)") that loops continuously. Music controls are available during gameplay for volume adjustment and toggling.
+### Progression System
+- **Score tracking** - Points for distance and pickups
+- **XP system** - Gain experience from combat and pickups
+- **Coin collection** - Currency for future upgrades
+- **Health management** - Take damage, find health items
 
-## 🏆 Gameplay Tips
+### Dynamic Difficulty
+- **Biome system** - 5 different biomes with unique challenges
+- **Spawn rate scaling** - More obstacles over time
+- **Enemy encounters** - Combat frequency increases
+- **Hazard variety** - Different obstacle types per biome
 
-1. **Perfect Timing**: Wait for hazards to telegraph before moving
-2. **Health Management**: Collect health potions when your HP is low
-3. **Streak Building**: Perfect dodges increase your score multiplier
-4. **Combat Strategy**: Position yourself strategically in the combat grid
-5. **Biome Awareness**: Later biomes have fewer health potions and harder enemies
+### Visual Feedback
+- **UI elements** - Score, coins, XP, health display
+- **Mode indicators** - Clear visual distinction between modes
+- **Combat grid** - Visual grid overlay for tactical mode
+- **Smooth transitions** - Animated mode switching
 
-## 🔧 Development
+## 🔧 **Development**
 
-### Adding New Hazards
-1. Add new type to `HazardType` enum in `HazardData.gd`
-2. Create factory method in `HazardData.gd`
-3. Add handling in `EnhancedObstacle.gd` and `Player.gd`
-4. Update biome spawn weights in `GameManager.gd`
+### Project Structure
+```
+endless_runner/
+├── Main.tscn                # Main game scene
+├── Player.gd                # Player controller
+├── GameManager.gd           # Game logic and mode management
+├── CombatGrid.gd            # Combat system
+├── *.mp3                    # Chiptune soundtrack
+└── README.md                # This file
+```
 
-### Modifying Combat
-- Edit formations in `CombatGrid.gd`
-- Adjust enemy stats and abilities
-- Add new attack patterns
+### Key Systems
+- **Player.gd** - Movement and abilities for both modes
+- **GameManager.gd** - Mode switching, spawning, scoring
+- **CombatGrid.gd** - Turn-based combat mechanics
+- **Biome system** - Different areas with unique spawning patterns
 
-### Audio Customization
-- Replace `background_music.mp3` with your own track
-- Adjust volume levels in `GameManager.gd`
-- Add sound effects through the sound system
+### Game Modes
+- **GameMode.RUNNER** - Endless running with obstacles
+- **GameMode.COMBAT** - Turn-based tactical combat
+- **Seamless switching** - Smooth transitions between modes
 
-## 📝 License
+## 🎮 **Gameplay Tips**
 
-This project is open source. Feel free to modify and distribute.
+### Runner Mode Strategy
+- **Timing jumps** - Learn obstacle patterns
+- **Collect everything** - Coins and XP are valuable
+- **Watch for enemies** - Combat encounters appear over time
+- **Use audio cues** - Music rhythm helps with timing
 
-## 🤝 Contributing
+### Combat Mode Tactics
+- **Positioning matters** - Use the grid strategically
+- **Plan ahead** - Think several moves in advance
+- **Control space** - Limit enemy movement options
+- **Quick decisions** - Don't overthink simple encounters
 
-Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
+### General Tips
+- **Learn biomes** - Each area has different challenges
+- **Manage health** - Don't ignore health pickups
+- **Audio control** - Use N key to find your favorite track
+- **Practice transitions** - Get comfortable switching between modes
 
-## 🎮 Credits
+## 🤝 **Contributing**
 
-- Built with Godot Engine 4.4.1
-- Chiptune music: "the brass and the blade (Remix)"
-- Wizard sprite assets included
+Contributions welcome! Areas for improvement:
+- **More enemy types** - Variety in combat encounters
+- **Power-up system** - Temporary abilities and boosts
+- **Upgrade shop** - Spend coins on improvements
+- **More biomes** - Additional themed areas
+- **Visual effects** - Particles and screen effects
+- **More music** - Additional chiptune tracks
+
+## 📝 **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🎵 **Credits**
+
+- **Game Engine**: Godot 4.x
+- **Music**: Chiptune tracks (various artists)
+- **Development**: Built with ❤️ for classic arcade gaming
+
+---
+
+**Ready for dual-mode action? Experience classic endless running with tactical combat!** 🎮⚔️
